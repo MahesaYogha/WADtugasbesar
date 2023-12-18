@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ReservasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [HomeController::class, 'index']);
 
-Route::get('/reservasi', function () {
-    return view('reservasi');
-});
+Route::get('/reservasi', [ReservasiController::class, 'index']);
+Route::get('/reservasi', [ReservasiController::class, 'create']);
+Route::get('/reservasi', [ReservasiController::class, 'edit']);
+Route::get('/reservasi', [ReservasiController::class, 'delete']);
+
