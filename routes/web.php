@@ -26,3 +26,8 @@ Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
 Route::get('/review', [ReviewController::class, 'edit']);
 Route::get('/review', [ReviewController::class, 'delete']);
+
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu', [MenuController::class, 'create']);
+Route::get('/menu', [MenuController::class, 'edit']);
+Route::get('/menu', [MenuController::class, 'delete']);
