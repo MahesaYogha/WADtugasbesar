@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservasiController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,3 @@ Route::get('/reservasi', [ReservasiController::class, 'delete']);
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
 Route::get('/review', [ReviewController::class, 'edit']);
-Route::get('/review', [ReviewController::class, 'delete']);
