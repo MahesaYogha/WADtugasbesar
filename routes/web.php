@@ -30,6 +30,7 @@ Route::get('//', [HomeController::class, 'index']);
 Route::get('/reservasi', [ReservasiController::class, 'index']);
 Route::get('/reservasi', [ReservasiController::class, 'create']);
 Route::get('/reservasi', [ReservasiController::class, 'edit']);
+Route::get('/reservasi', [ReservasiController::class, 'delete']);
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
