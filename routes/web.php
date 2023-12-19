@@ -16,21 +16,7 @@ use App\Http\Controllers\ReviewController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
-
-Route::get('/reservasi', [ReservasiController::class, 'index']);
-Route::get('/reservasi', [ReservasiController::class, 'create']);
-Route::get('/reservasi', [ReservasiController::class, 'edit']);
-
-Route::get('/review', [ReviewController::class, 'index']);
-Route::get('/review', [ReviewController::class, 'create']);
-Route::get('/review', [ReviewController::class, 'edit']);
-
-Route::get('/menu', [MenuController::class, 'index']);
-Route::get('/menu', [MenuController::class, 'create']);
-Route::get('/menu', [MenuController::class, 'edit']);
-
-Route::get('//', function () {
+Route::get('/', function () {
     return view('welcome');
 })->middleware('auth');
 
@@ -44,3 +30,18 @@ Route::post('/register', [AuthController::class, 'store'])->name('auth.store');
 
 // Logout
 Route::post('/logout', [AuthController::class, 'logout'])->name('auth.logout');
+
+
+Route::get('//', [HomeController::class, 'index']);
+
+Route::get('/reservasi', [ReservasiController::class, 'index']);
+Route::get('/reservasi', [ReservasiController::class, 'create']);
+Route::get('/reservasi', [ReservasiController::class, 'edit']);
+
+Route::get('/review', [ReviewController::class, 'index']);
+Route::get('/review', [ReviewController::class, 'create']);
+Route::get('/review', [ReviewController::class, 'edit']);
+
+Route::get('/menu', [MenuController::class, 'index']);
+Route::get('/menu', [MenuController::class, 'create']);
+Route::get('/menu', [MenuController::class, 'edit']);
