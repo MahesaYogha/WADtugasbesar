@@ -1,95 +1,48 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.87.0">
-    <title>Signin Template · Bootstrap v5.1</title>
-
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
-
-    
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="{{ asset('/css/signin.css') }}" rel="stylesheet">
-  </head>
-  <body class="text-center">
-    
-<main class="form-signin">
-  <form action="{{ route('auth.register') }}" method="POST">
-      @csrf
-    <img class="mb-4" src="{{ asset('img/bootstrap-logo.svg') }}" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-    <div class="form-floating">
-      <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" id="email" name="email" placeholder="name@example.com">
-      <label for="email">Email address</label>
-      @error('email')
-      <div class="invalid-feedback">
-      {{ $message }}
-      </div>
-      @enderror
+@extends('layouts')
+@section('content')
+<main class="signup-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <h3 class="card-header text-center">Register User</h3>
+                    <div class="card-body">
+                        <form action="{{ route('register.custom') }}" method="POST">
+                            @csrf
+                            <div class="form-group mb-3">
+                                <input type="text" placeholder="Name" id="name" class="form-control" name="name"
+                                    required autofocus>
+                                @if ($errors->has('name'))
+                                <span class="text-danger">{{ $errors->first('name') }}</span>
+                                @endif
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="text" placeholder="Email" id="email_address" class="form-control"
+                                    name="email" required autofocus>
+                                @if ($errors->has('email'))
+                                <span class="text-danger">{{ $errors->first('email') }}</span>
+                                @endif
+                            </div>
+                            <div class="form-group mb-3">
+                                <input type="password" placeholder="Password" id="password" class="form-control"
+                                    name="password" required>
+                                @if ($errors->has('password'))
+                                <span class="text-danger">{{ $errors->first('password') }}</span>
+                                @endif
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="checkbox">
+                                    <label><input type="checkbox" name="remember"> Remember Me</label>
+                                </div>
+                            </div>
+                            <div class="d-grid mx-auto">
+                                <button type="submit" class="btn btn-dark btn-block">Sign up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="form-floating">
-      <input type="text" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" id="name" name="name" placeholder="your name">
-      <label for="name">Your Name</label>
-      @error('name')
-      <div class="invalid-feedback">
-      {{ $message }}
-      </div>
-      @enderror
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control @error('password') is-invalid @enderror" name="password" id="password" placeholder="Password">
-      <label for="password">Password</label>
-      @error('password')
-      <div class="invalid-feedback">
-      {{ $message }}
-      </div>
-      @enderror
-    </div>
-    <div class="form-floating">
-      <input type="password" class="form-control @error('confirm-password') is-invalid @enderror" name="confirm-password" id="confirm-password" placeholder="confirm-password">
-      <label for="confirm-password">Confirm Password</label>
-      @error('confirm-password')
-      <div class="invalid-feedback">
-      {{ $message }}
-      </div>
-      @enderror
-    </div>
-
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-    <p class="mt-5 mb-3 text-muted">&copy; 2017–2021</p>
-  </form>
 </main>
-
-
-    
-  </body>
-</html>
+@endsection
