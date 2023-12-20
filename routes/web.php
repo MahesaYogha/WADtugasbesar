@@ -27,10 +27,11 @@ Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout')
 
 Route::get('//', [HomeController::class, 'index']);
 
-Route::get('/reservasi', [ReservasiController::class, 'index']);
-Route::get('/reservasi', [ReservasiController::class, 'create']);
-Route::get('/reservasi', [ReservasiController::class, 'edit']);
-Route::get('/reservasi', [ReservasiController::class, 'delete']);
+Route::get('/createReservasi', [ReservasiController::class, 'createReservasi'])->name('createReservasi');
+Route::post('/insertReservasi', [ReservasiController::class, 'insertReservasi'])->name('insertReservasi');
+Route::get('/readReservasi', [ReservasiController::class, 'readReservasi'])->name('readReservasi');
+Route::get('/updateReservasi', [ReservasiController::class, 'updateReservasi'])->name('updateReservasi');
+Route::get('/deleteReservasi', [ReservasiController::class, 'deleteReservasi'])->name('deleteReservasi');
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);

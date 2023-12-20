@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>CRUD LARAVEL 8</title>
+</head>
+
+<body>
+    <h1 class="text-center mb-4">Tambah Reservasi</h1>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-8">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/insertReservasi" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama</label>
+                                <br>
+                                <input type="text" class="form-control" name="nama" id="nama">
+                            </div>
+                            <div class="mb-3">
+                                <label for="no_telepon">No Telepon</label>
+                                <br>
+                                <input type="number" class="form-control" name="no_telepon" id="no_telepon">
+                            </div>
+                            <div class="mb-3">
+                                <label for="jumlah_orang">Jumlah Orang</label>
+                                <br>
+                                <input type="number" class="form-control" name="jumlah_orang" id="jumlah_orang" min="1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="tanggal_reservasi">Tanggal Reservasi</label>
+                                <br>
+                                <input type="date" class="form-control" name="tanggal_reservasi" id="tanggal_reservasi">
+                            </div>
+                            <div class="mb-3">
+                                <label for="catatan">Catatan</label>
+                                <br>
+                                <textarea tyspe="text" class="form-control" name="catatan" id="catatan" rows="5"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
