@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -27,14 +28,20 @@ padding:0;
 }
 .navbar-brand{
     font-weight: 500;
-    color:burlywood;
+    color:#c4c4c4;
     font-size: 24px;
     transition: 0.3s color;
     margin-left: 2%;
 
+
+}
+
+.navbar-brand:hover, .nav-link.active{
+    color:rgb(211, 176, 61);
+    
 }
 .navbar{
-    background-color: #3d3939;
+    background-color: #18181c;
     height:80px;
     margin: 20px;
     border-radius: 16px;
@@ -47,7 +54,14 @@ padding:0;
 .navbar-toggler {
     border: none;
     font-size:1.2rem;
+    color: black;
 
+}
+.navbar-toggler-icon{
+   background-color:#c4c4c4;
+}
+.offcanvas-body{
+    background-color: #18181c;
 }
 .navbar-toggler:focus .btn-close{
     box-shadow: none;
@@ -55,16 +69,23 @@ padding:0;
 
 
 }
+
 .nav-link{
-   color:#666777;
+   color:#c4c4c4;
    font-weight:500;
    position: relative;
 
 }
 .nav-link:hover, .nav-link.active {
-    color: #000;
+    color: rgb(211, 176, 61);
     
 
+}
+.offcanvas-header{
+    background-color: #18181c;
+}
+.offcanvas-title{
+    color: white;
 }
 @media (min-width: 991px){
     .nav-link:before{
@@ -89,7 +110,7 @@ padding:0;
     }
 }
 .hero-section{
-    background: url(hero.png) no-repeat center;
+    background: url(home.jpg) no-repeat center;
     background-size: cover;
     width: 100%;
     height: 99.1vh;
@@ -99,22 +120,26 @@ padding:0;
     background-size: cover;
 
 
+    
 }
 .menu-section{
     display: block;
-    background: url(hero.png) no-repeat center;
+    background: url(menu.jpg) no-repeat center;
+    background-size: 50%;
     margin: 0;
     height: 600px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-position:right center ;
+  
 }
 .menu{
     display: block;
     width: 50%;
     height: 600px;
-    background-color:rgb(36, 36, 58)   ;
+    background-color:#201f1f   ;
+    
 }
 
 .reservasi-section{
@@ -131,14 +156,14 @@ padding:0;
     
     width: 50%;
     height: 600px;
-    background-color:#3d3939;   ;
+    background-color:#201f1f;   ;
     float: right;
 }
 .right-menu{
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
     width: 100%;
     
     /* You need to define an explicit height! */
@@ -163,7 +188,7 @@ padding:0;
     height: 100%;
 }
 .abouts{
-    height: 600px;
+    height: 800px;
     width: 100%;
     background-color: #ffffff;
 
@@ -178,7 +203,7 @@ padding:0;
 
 }
 .gambar1{
-    background: url(M.png) no-repeat center;
+    background-color:rgb(0, 0, 0);
     background-size: cover;
     width: 100%;
     height: 13.5vh;
@@ -189,7 +214,7 @@ padding:0;
 
 }
 .gambar2{
-    background: url(M.png) no-repeat center;
+    background-color: #000;
     background-size: cover;
     width: 100%;
     height: 15vh;
@@ -199,8 +224,8 @@ padding:0;
     background-size: cover;
 }
 .gambar3{
-    background: url(M.png) no-repeat center;
-    background-size: cover;
+    background-color: #000;
+    background-size: 10%;
     width: 100%;
     height: 100vh;
     background-attachment: fixed;
@@ -209,7 +234,7 @@ padding:0;
     background-size: cover;
 }
 .gambar4{
-    background: url(M.png) no-repeat center;
+    background-color: white;
     background-size: cover;
     width: 100%;
     height: 15vh;
@@ -309,7 +334,47 @@ padding:0;
 
 
 
+/* foooter */
 
+footer {
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    margin-bottom: 100px;
+}
+
+footer a {
+    color: white;
+}
+
+#footer-col {
+    margin-top: 30px;
+}
+
+.footer-image {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+footer h6 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 0px;
+}
+
+a {
+    color: black;
+}
+
+button {
+    margin-top: 30px;
+}
+
+.image-home {
+    width: 100%;
+}
 
 /* body {
     font-family: Arial, Helvetica, sans-serif;
