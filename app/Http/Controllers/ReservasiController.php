@@ -31,7 +31,7 @@ class ReservasiController extends Controller
         //
 
         $data = [
-            'nama' => $request->nama,
+            'nama' => $request->nama, 'nama' => $request->nama,
         ];
 
         $query = mysqli_query($conn, "INSERT INTO reservasi(nama, no_telepon, jumlah_orang, tanggal_reservasi, catatan) VALUES ('$nama', '$no_telepon', '$jumlah_orang', '$tanggal_reservasi', '$catatan')");
@@ -79,5 +79,19 @@ class ReservasiController extends Controller
     public function destroy(string $id)
     {
         //
+        $id = $_GET['id'];
+        $data = mysqli_query($conn,"SELECT * FROM reservasi WHERE id = '$id'");
+
+            mysqli_query($conn, "DELETE FROM reservasi WHERE id='$id'");
+
+            if ($data) {
+                echo "<script>alert('Reservasi berhasil dihapus')</script>";
+                echo "<meta http-equiv='refresh' content='1 url=listReservasi.php'>";
+            } else {
+                echo "<script>alert('Reservasi gagal dihapus')</script>";
+                echo "<meta http-equiv='refresh' content='1 url=listReservasi.php'>";
+            }
+
+$conn->close();
     }
 }
