@@ -40,3 +40,4 @@ Route::get('/review', [ReviewController::class, 'edit']);
 Route::get('/menu', [MenuController::class, 'index']);
 Route::get('/menu', [MenuController::class, 'create']);
 Route::get('/menu', [MenuController::class, 'edit']);
+
