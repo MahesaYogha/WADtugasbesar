@@ -1,7 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -19,10 +19,10 @@ class CustomAuthController extends Controller
         ]);
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard')
+            return redirect()->intended('/home')
                 ->withSuccess('Signed in');
         }
-        return redirect("login")->withSuccess('Login details are not valid');
+        return redirect("/login")->withSuccess('Login details are not valid');
     }
     public function registration()
     {
@@ -37,7 +37,7 @@ class CustomAuthController extends Controller
         ]);
         $data = $request->all();
         $check = $this->create($data);
-        return redirect("dashboard")->withSuccess('You have signed-in');
+        return redirect("/home")->withSuccess('You have signed-in');
     }
     public function create(array $data)
     {
@@ -49,15 +49,13 @@ class CustomAuthController extends Controller
     }
     public function dashboard()
     {
-        if (Auth::check()) {
-            return view('auth.dashboard');
-        }
-        return redirect("login")->withSuccess('You are not allowed to access');
+        return view('auth.dashboard');
     }
-    public function signOut()
+    public function signOut(Request $request)
     {
-        Session::flush();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         Auth::logout();
-        return Redirect('login');
+        return redirect('/login');
     }
 }
