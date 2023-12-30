@@ -134,7 +134,7 @@
           <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
           <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
           <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
-          <button class="reservasi-button">Reservasi Sekarang!</button>
+          <button class="reservasi-button"><a href="/reservasi/create">Reservasi Sekarang!</a></button>
         </h1>
       </div>
     </div>
