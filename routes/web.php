@@ -34,7 +34,7 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
