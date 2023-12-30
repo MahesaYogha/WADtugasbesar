@@ -263,7 +263,7 @@
 
                 <div class="row">
                   <div class="col">
-                    <label for="no_hp" class="form-label">Penilaiian</label>
+                    <label for="no_hp" class="form-label">Penilaian</label>
 
                   </div>
 
