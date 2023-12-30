@@ -16,21 +16,25 @@ use App\Http\Controllers\MenuController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+Route::get('/login', [CustomAuthController::class, 'index'])->middleware('guest')->name('login');
+Route::post('/custom-login', [CustomAuthController::class, 'customLogin'])->middleware('guest')->name('login.custom');
+Route::get('/register', [CustomAuthController::class, 'registration'])->middleware('guest')->name('register');
+Route::post('/custom-registration', [CustomAuthController::class, 'customRegistration'])->middleware('guest')->name('register.custom');
 
-Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
-Route::get('login', [CustomAuthController::class, 'index'])->name('login');
-Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
-Route::get('register', [CustomAuthController::class, 'registration'])->name('register');
-Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
-Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
+    Route::get('/signout', [CustomAuthController::class, 'signOut'])->name('signout');
+    Route::get('/reservasi/create', [ReservasiController::class, 'create']);
+    Route::post('/reservasi/create', [ReservasiController::class, 'store']);
+    Route::get('/reservasi', [ReservasiController::class, 'index']);
+    Route::get('/reservasi/{id}', [ReservasiController::class, 'show']);
+    Route::get('/reservasi/{id}/edit', [ReservasiController::class, 'edit']);
+    Route::put('/reservasi/{id}/edit', [ReservasiController::class, 'update']);
+    Route::delete('/reservasi/{id}', [ReservasiController::class, 'destroy']);
+});
 
 
-Route::get('//', [HomeController::class, 'index']);
-
-Route::get('/reservasi', [ReservasiController::class, 'index']);
-Route::get('/reservasi', [ReservasiController::class, 'create']);
-Route::get('/reservasi', [ReservasiController::class, 'edit']);
-Route::get('/reservasi', [ReservasiController::class, 'delete']);
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);

@@ -19,10 +19,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="reservasiForm.php">Reservasi</a>
+                        <a class="nav-link" href="/reservasi/create">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listReservasi.php">Lihat Reservasi</a>
+                        <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
                     </li>
                 </ul>
             </div>
@@ -33,15 +33,8 @@
             <h1>List Reservasi</h1>
             <br>
 
-            <?php
-            include("connect.php");
-
-            $query = "SELECT * FROM reservasi";
-            $result = $conn->query($query);
-
-
-            if ($result->num_rows > 0) {
-                echo '<table  class="text-center" width=100% border="1" cellpadding="4">
+            @if($count_reservasi > 0)
+                    <table  class="text-center" width=100% border="1" cellpadding="4">
                         <thead>
                             <tr>
                                 <th>Nama</th>
@@ -51,29 +44,24 @@
                                 <th>Catatan</th>
                             </tr>
                         </thead>
-                    <tbody>';
+                    <tbody>
 
-                while ($row = $result->fetch_assoc()) {
-                    echo '<tr>
-                            <td>' . $row['nama'] . '</td>
-                            <td>' . $row['no_telepon'] . '</td>
-                            <td>' . $row['jumlah_orang'] . '</td>
-                            <td>' . $row['tanggal_reservasi'] . '</td>
-                            <td>' . $row['catatan'] . '</td>
-                            <td><a class="btn btn-primary" href="detailReservasi.php?id='.$row['id'].'">Lihat Detail</a></td>
-                        </tr>';
-                }
-
-                echo '
+                    @foreach($reservasi as $row)
+                    <tr>
+                            <td>{{ $row['nama'] }}</td>
+                            <td>{{ $row['no_telepon'] }}</td>
+                            <td>{{ $row['jumlah_orang'] }} </td>
+                            <td>{{ $row['tanggal_reservasi'] }}</td>
+                            <td>{{ $row['catatan'] }}</td>
+                            <td><a class="btn btn-primary" href="/reservasi/{{ $row['id'] }}">Lihat Detail</a></td>
+                        </tr>
+                        @endforeach
                         </tbody>
-                    </table>';
-            }
+                    </table>
 
-            else {
-                echo "Tidak Ada Data Dalam Tabel";
-            }
-
-            ?>
+            @else 
+                <h2>Tidak Ada Data Dalam Tabel</h2>
+            @endif
         </div>
     </center>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

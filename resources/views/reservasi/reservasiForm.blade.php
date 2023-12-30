@@ -17,10 +17,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="reservasiForm.php">Reservasi</a>
+                        <a class="nav-link" href="/reservasi/create">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listReservasi.php">Lihat Reservasi</a>
+                        <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
                     </li>
                 </ul>
             </div>
@@ -31,7 +31,8 @@
             <h1>Reservasi</h1>
             <br>
             <div class="col">
-                <form action="createReservasi.php" method="POST" enctype="multipart/form-data">
+                <form action="/reservasi/create" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <br>
