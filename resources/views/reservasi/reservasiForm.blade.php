@@ -10,17 +10,17 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid" id="id-navbar">
-            <a class="navbar-brand" href="index.html">Ujung Landasan Restaurant</a>
+            <a class="navbar-brand" href="/home">Ujung Landasan Restaurant</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="reservasiForm.php">Reservasi</a>
+                        <a class="nav-link" href="/reservasi/create">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="listReservasi.php">Lihat Reservasi</a>
+                        <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
                     </li>
                 </ul>
             </div>
@@ -31,7 +31,8 @@
             <h1>Reservasi</h1>
             <br>
             <div class="col">
-                <form action="createReservasi.php" method="POST" enctype="multipart/form-data">
+                <form action="/reservasi/create" method="POST" enctype="multipart/form-data">
+                    @csrf
                     <div class="mb-3">
                         <label for="nama" class="form-label">Nama</label>
                         <br>
@@ -57,7 +58,7 @@
                         <br>
                         <textarea type="string" class="form-control" name="catatan" id="catatan" rows="5"></textarea>
                     </div>
-                    <button type="submit" name="back" id="back" class="btn btn-light"><a href="reservasi.html">Kembali</a></button>
+                    <button type="submit" name="back" id="back" class="btn btn-light"><a href="/home">Kembali</a></button>
                     <button type="submit" name="create" id="create" class="btn btn-primary">Kirim</button>
                 </form>
             </div>

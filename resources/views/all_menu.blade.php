@@ -49,7 +49,12 @@
                 @endforeach
 
             </div>
+<<<<<<< HEAD
 
+=======
+             
+            <br>
+>>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
             <center>
                 <a class="btn btn-warning" href="{{ asset('assets/Menu Ujung Landasan.pdf') }}" target= "_blank">Menu Selengkapnya</a>
             </center>
