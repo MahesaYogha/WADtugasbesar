@@ -8,7 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="{{ asset('assets/index.css') }}" rel="stylesheet">
-<<<<<<< HEAD
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -29,8 +28,6 @@
       color: #f8d057;
     }
   </style>
-=======
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
 </head>
 
 <body>
@@ -49,7 +46,6 @@
   </section>
 
   <!--section about-->
-<<<<<<< HEAD
   <section id="1" class="abouts" style="padding: 100px">
 
     <div class="row">
@@ -60,14 +56,6 @@
       <div class="col-lg-6 ">
         <img src="{{ asset('/') }}storage/{{ $about_us->gambar }}" alt="" class="w-100" height="600">
       </div>
-=======
-  <section id="1" class="abouts">
-    <div class="about1">
-
-    </div>
-    <div class="about2">
-
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
     </div>
   </section>
   <!-- <section id="2"class="about">
@@ -153,18 +141,12 @@
       </div>
     </div>
   </section>
-<<<<<<< HEAD
    <!--section before menu-->
    
   </section>
   <!--section before menu-->
   <section id="-reservasi">
     <div class="gambar1">
-=======
-  <!--section before reservasi-->
-  <section id="reservasi">
-    <div class="gambar4">
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
     </div>
   </section>
   <!--section reservasi-->
@@ -179,16 +161,11 @@
           <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
           <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
           <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
-<<<<<<< HEAD
           <button class="reservasi-button">Reservasi Sekarang!</button>
-=======
-          <button class="reservasi-button"><a href="/reservasi/create">Reservasi Sekarang!</a></button>
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
         </h1>
       </div>
     </div>
   </section>
-<<<<<<< HEAD
 
   <!--section sebelum footer-->
   <section id="about">
@@ -286,7 +263,7 @@
 
                 <div class="row">
                   <div class="col">
-                    <label for="no_hp" class="form-label">Penilaian</label>
+                    <label for="no_hp" class="form-label">Penilaiian</label>
 
                   </div>
 
@@ -334,14 +311,6 @@
 
 
 
-=======
-  <!--section sebelum footer-->
-  <section id="about">
-    <div class="gambar1">
-    </div>
-  </section>
-
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
   <!-- <section id= "14"class="menu">
       <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
         <h1>UJUNG</h1>
@@ -352,7 +321,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
-<<<<<<< HEAD
 
 
   <script>
@@ -376,8 +344,6 @@
       });
   });
   </script>
-=======
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
 
 
 
@@ -394,11 +360,8 @@
 
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
   <!-- <!doctype html>
 <html lang="en">
   <head>
