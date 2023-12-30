@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Custom Auth in Laravel</title>
+    <title>Admin Ujung Landasan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @yield('addStyle')
 </head>
+
 <body>
     <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
         <div class="container">
@@ -23,7 +29,22 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('signout') }}">Logout</a>
+                        <a class="nav-link" href="{{ url('admin/menu') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Our Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Reservasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signout') }}"><b>Logout</b></a>
                     </li>
                     @endguest
                 </ul>
@@ -34,4 +55,12 @@
         @yield('content')
     </div>
 </body>
+
 </html>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+@yield('addScript')

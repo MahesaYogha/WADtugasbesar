@@ -5,7 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\CustomAuthController;
-
+use App\Http\Controllers\MenuController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,7 +36,23 @@ Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
 Route::get('/review', [ReviewController::class, 'edit']);
 
-Route::get('/menu', [MenuController::class, 'index']);
-Route::get('/menu', [MenuController::class, 'create']);
-Route::get('/menu', [MenuController::class, 'edit']);
+// Route::get('/menu', [MenuController::class, 'index']);
+// Route::get('/menu', [MenuController::class, 'create']);
+// Route::get('/menu', [MenuController::class, 'edit']);
 
+//route admin
+Route::prefix('admin')->middleware(['auth'])->group(function () {
+    Route::get('menu', [MenuController::class, 'index'])->name('admin.menu');
+    Route::get('create_menu', [MenuController::class, 'create'])->name('admin.create_menu');
+
+    Route::post('menu_store', [MenuController::class, 'store'])->name('admin.menu_store');
+    Route::get('delete_menu/{id}', [MenuController::class, 'destroy'])->name('admin.delete_menu');
+    Route::get('update_menu/{id}', [MenuController::class, 'edit'])->name('admin.update_menu');
+
+    Route::post('menu_update/{id}', [MenuController::class, 'update'])->name('admin.menu_update');
+
+   
+});
+
+
+Route::get('/all_menu', [MenuController::class, 'all_menu'])->name('all_menu');
