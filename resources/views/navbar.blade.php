@@ -35,11 +35,18 @@
             <a class="nav-link mx-lg-2" href="#-menu">Menu</a>
           </li>
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link mx-lg-2" href="#reservasi">Reservasi</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link mx-lg-2" href="">Masukan</a>
+=======
+            <a class="nav-link mx-lg-2" href="#-reservasi">Reservasi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link mx-lg-2" href="#masukan">Masukan</a>
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
           </li>
 
       </div>

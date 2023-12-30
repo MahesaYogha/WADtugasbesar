@@ -8,8 +8,11 @@ use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\MenuController;
+<<<<<<< HEAD
 use App\Http\Controllers\OurServiceController;
 
+=======
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,7 +23,6 @@ use App\Http\Controllers\OurServiceController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('dashboard', [CustomAuthController::class, 'dashboard'])->name('dashboard');
 Route::get('login', [CustomAuthController::class, 'index'])->name('login');
 Route::post('custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
@@ -28,13 +30,18 @@ Route::get('register', [CustomAuthController::class, 'registration'])->name('reg
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
+Route::middleware(['auth'])->group(function () {
+    Route::get('/reservasi/create', [ReservasiController::class, 'create']);
+    Route::post('/reservasi/create', [ReservasiController::class, 'store']);
+    Route::get('/reservasi', [ReservasiController::class, 'index']);
+    Route::get('/reservasi/{id}', [ReservasiController::class, 'show']);
+    Route::get('/reservasi/{id}/edit', [ReservasiController::class, 'edit']);
+    Route::put('/reservasi/{id}/edit', [ReservasiController::class, 'update']);
+    Route::delete('/reservasi/{id}', [ReservasiController::class, 'destroy']);
+});
 
-Route::get('//', [HomeController::class, 'index']);
 
-Route::get('/reservasi', [ReservasiController::class, 'index']);
-Route::get('/reservasi', [ReservasiController::class, 'create']);
-Route::get('/reservasi', [ReservasiController::class, 'edit']);
-Route::get('/reservasi', [ReservasiController::class, 'delete']);
+Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
@@ -65,6 +72,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('masukan_update/{id}', [MasukanController::class, 'update'])->name('admin.masukan_update');
     Route::get('delete_masukan/{id}', [MasukanController::class, 'destroy'])->name('admin.delete_masukan');
     Route::post('store_masukan', [MasukanController::class, 'store'])->name('admin.store_masukan');
+<<<<<<< HEAD
 
 
     Route::get('our_service', [OurServiceController::class, 'index'])->name('admin.our_service');
@@ -75,6 +83,8 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('update_service/{id}', [OurServiceController::class, 'edit'])->name('admin.update_service');
 
     Route::post('service_update/{id}', [OurServiceController::class, 'update'])->name('admin.service_update');
+=======
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
 });
 
 
