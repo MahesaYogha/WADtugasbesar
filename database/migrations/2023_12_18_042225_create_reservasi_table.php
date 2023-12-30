@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('reservasi', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('no_telepon');
+            $table->bigInteger('no_telepon');
             $table->integer('jumlah_orang');
             $table->date('tanggal_reservasi');
             $table->string('catatan');

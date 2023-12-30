@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Custom Auth in Laravel</title>
+    <title>Admin Ujung Landasan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -29,6 +29,13 @@
                     </li>
                     @else
                     <li class="nav-item">
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
                         <a class="nav-link" href="{{ url('admin/menu') }}">Menu</a>
                     </li>
 
@@ -37,7 +44,40 @@
                     </li>
 
                     <li class="nav-item">
+<<<<<<< HEAD
+=======
+                        <a class="nav-link" href="{{ url('admin/masukan') }}">Masukan</a>
+                    </li>
+
+                    <li class="nav-item">
+<<<<<<< HEAD
+                        <a class="nav-link" href="{{ route('admin.our_service') }}">Our Service</a>
+                    </li>
+
+
+                    <li class="nav-item">
+=======
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
                         <a class="nav-link" href="{{ route('signout') }}">Logout</a>
+=======
+                        <a class="nav-link" href="{{ url('admin/menu') }}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Our Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Reservasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('admin/menu') }}">Review</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('signout') }}"><b>Logout</b></a>
+>>>>>>> aa5e2beffcbe9d1892c8e1b024ea390b9e8bda29
                     </li>
                     @endguest
                 </ul>

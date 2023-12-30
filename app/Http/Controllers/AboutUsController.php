@@ -101,4 +101,8 @@ class AboutUsController extends Controller
     {
         //
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53

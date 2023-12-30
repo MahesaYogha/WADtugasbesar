@@ -8,6 +8,29 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="{{ asset('assets/index.css') }}" rel="stylesheet">
+<<<<<<< HEAD
+=======
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+
+  <style>
+    .rating {
+      font-size: 2em;
+      cursor: pointer;
+    }
+
+    .star {
+      color: #ccc;
+      transition: color 0.2s;
+    }
+
+    .star.selected {
+      color: #f8d057;
+    }
+  </style>
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 </head>
 
 <body>
@@ -59,12 +82,25 @@
   <!--section listing home-->
   <section id="menu">
     <div class="gambar3">
+<<<<<<< HEAD
       <div class="card-text">
         <p>Our Services</p>
+=======
+<<<<<<< HEAD
+      <div class="card-text mb-5">
+        <center>
+          <h1>Our Services</h1>
+        </center>
+=======
+      <div class="card-text">
+        <p>Our Services</p>
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
       </div>
       <section id="1" class="dashboad">
         <div class="dash">
 
+<<<<<<< HEAD
           <div class="card">
             <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
             <div class="card-content">
@@ -75,6 +111,38 @@
             </div>
 
           </div>
+=======
+<<<<<<< HEAD
+          @foreach ($service as $item)
+          <div class="card">
+            <img src="{{ asset('/') }}storage/{{ $item->gambar }}" alt="Conventional Hall"
+              class="img-fluid card-img-bottom" style="height: 180px">
+            <div class="card-content">
+              <center>
+                <h5>{{ $item->judul }}</h5>
+              </center>
+              <p style="text-align: justify">{{ $item->isi }}</p>
+
+            </div>
+
+          </div>
+          @endforeach
+
+
+
+
+=======
+          <div class="card">
+            <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
+            <div class="card-content">
+              <h3>Card 1</h3>
+              <p>convention hall bla bla bla bla
+              </p>
+              <a href="" class="btn">Read More</a>
+            </div>
+
+          </div>
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 
           <div class="card">
             <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
@@ -96,6 +164,10 @@
               <a href="" class="btn">Read More</a>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 
       </section>
     </div>
@@ -121,6 +193,7 @@
       </div>
     </div>
   </section>
+<<<<<<< HEAD
   <!--section before reservasi-->
   <section id="reservasi">
     <div class="gambar4">
@@ -149,6 +222,209 @@
     </div>
   </section>
 
+=======
+<<<<<<< HEAD
+  <!--section before reservasi-->
+  <section id="reservasi" style="height: 55vh">
+
+=======
+   <!--section before menu-->
+   
+  </section>
+  <!--section before menu-->
+  <section id="-reservasi">
+    <div class="gambar1">
+    </div>
+  </section>
+  <!--section reservasi-->
+  <section class="reservasi-section">
+    <iframe style="width: 50%; height: 100%;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2671539890116!2d116.13314967487135!3d-8.666123588198968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbc00738fe82d%3A0x37e6f67267832d3a!2sUjung%20Landasan%20Restaurant%20%2F%20U-Land%20Cafe!5e0!3m2!1sid!2sid!4v1701793150666!5m2!1sid!2sid"
+      frameborder="0"></iframe>
+    <div class="reservasi">
+      <div class="right-menu">
+        <h1 style="line-height: 1.8;color:white;">Kontak <br>
+          <span class="smaller-text">Dasan Tapen, Kec. Gerung</span>
+          <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
+          <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
+          <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
+          <button class="reservasi-button">Reservasi Sekarang!</button>
+        </h1>
+      </div>
+    </div>
+  </section>
+
+  <!--section sebelum footer-->
+  <section id="about">
+    {{-- <h1>asdas</h1> --}}
+  </section>
+  <section id="masukan">
+    <div class="gambar1">
+    </div>
+  </section>
+  <!--section before reservasi-->
+  <section id="reservasi" style="height: 55vh">
+
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
+    {{-- <h1>asda</h1> --}}
+
+    <div class="row">
+      @foreach ($masukan as $item)
+
+      <div class="col-lg-4">
+        <div class="card" style="border-radius: 30px">
+          <div class="card-body" style="height: 100px">
+
+
+            <div class="row">
+              <div class="col-lg-4">
+                <p>{{ $item->nama }}</p>
+              </div>
+              <div class="col-lg-8" style="margin-top: -12px">
+                <div id="rating" class="rating">
+                  @for ($i = 0; $i < $item->penilaiian; $i++) <span class="staras" style="color: #f8d057">&#9733;</span>
+                    @endfor
+
+
+                </div>
+              </div>
+            </div>
+
+
+
+            <p class="card-text mt-3" style="color: black">{{ $item->isi_masukan }}</p>
+
+          </div>
+        </div>
+      </div>
+
+
+      @endforeach
+
+
+
+
+
+    </div>
+
+    <center>
+      <button class="btn btn-warning" style="margin-top: 80px" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">Berikan Masukan Anda</button>
+    </center>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Berikan Masukan</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <form action="{{ route('admin.store_masukan') }}" method="POST" id="masukan_add">
+              @csrf
+
+              <div class="mb-3">
+                <label for="nama" class="form-label">Nama</label>
+
+                <input type="text" class="form-control" id="nama" name="nama" required>
+
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+
+                <input type="email" class="form-control" id="email" name="email" required>
+
+              </div>
+
+              <div class="mb-3">
+                <label for="no_hp" class="form-label">Nomor Hp</label>
+
+                <input type="number" class="form-control" id="no_hp" name="no_hp" required>
+
+              </div>
+
+              <div class="mb-3">
+
+                <div class="row">
+                  <div class="col">
+                    <label for="no_hp" class="form-label">Penilaiian</label>
+
+                  </div>
+
+                  <div class="col" style="margin-top: -10px">
+                    <div id="rating" class="rating">
+                      <span class="star" data-value="1">&#9733;</span>
+                      <span class="star" data-value="2">&#9733;</span>
+                      <span class="star" data-value="3">&#9733;</span>
+                      <span class="star" data-value="4">&#9733;</span>
+                      <span class="star" data-value="5">&#9733;</span>
+                    </div>
+
+                    {{-- <p id="selectedRating">Selected Rating: 0</p> --}}
+                    <input type="hidden" name="penilaiian" id="selectedRating">
+
+
+                  </div>
+                </div>
+
+
+
+
+
+
+              </div>
+
+              <div class="mb-3">
+                <label for="isi_masukan" class="form-label">Isi Masukan</label>
+
+                <textarea name="isi_masukan" id="isi_masukan" cols="30" rows="5" class="form-control"></textarea>
+
+              </div>
+
+            </form>
+
+          </div>
+          <div class=" modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" form="masukan_add" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<<<<<<< HEAD
+  </section>
+  <!--section reservasi-->
+  <section class="reservasi-section">
+    <iframe style="width: 50%; height: 100%;"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2671539890116!2d116.13314967487135!3d-8.666123588198968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbc00738fe82d%3A0x37e6f67267832d3a!2sUjung%20Landasan%20Restaurant%20%2F%20U-Land%20Cafe!5e0!3m2!1sid!2sid!4v1701793150666!5m2!1sid!2sid"
+      frameborder="0"></iframe>
+    <div class="reservasi">
+      <div class="right-menu">
+        <h1 style="line-height: 1.8;color:white;">Kontak <br>
+          <span class="smaller-text">Dasan Tapen, Kec. Gerung</span>
+          <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
+          <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
+          <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
+          <button class="reservasi-button">Reservasi Sekarang!</button>
+        </h1>
+      </div>
+    </div>
+  </section>
+  <!--section sebelum footer-->
+  <section id="about">
+    {{-- <h1>asdas</h1> --}}
+  </section>
+=======
+>>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
+
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
   <!-- <section id= "14"class="menu">
       <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
         <h1>UJUNG</h1>
@@ -159,6 +435,32 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
+<<<<<<< HEAD
+=======
+
+
+  <script>
+    $(document).ready(function() {
+      var selectedRating = 0;
+
+      $('.star').on('click', function() {
+          var value = $(this).data('value');
+
+          // Reset all stars
+          $('.star').removeClass('selected');
+
+          // Highlight selected stars
+          for (var i = 1; i <= value; i++) {
+              $('.star[data-value=' + i + ']').addClass('selected');
+          }
+
+          // Update selected rating
+          selectedRating = value;
+          $('#selectedRating').val(selectedRating);
+      });
+  });
+  </script>
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 
 
 
@@ -175,6 +477,11 @@
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
   <!-- <!doctype html>
 <html lang="en">
   <head>
@@ -327,6 +634,6 @@
         </div>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></>
   </body>
 </html> -->
