@@ -128,7 +128,6 @@ padding:0;
     background-size: 50%;
     margin: 0;
     height: 600px;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-position:right center ;
@@ -139,6 +138,7 @@ padding:0;
     width: 50%;
     height: 600px;
     background-color:#201f1f   ;
+    padding: 5% 8%;
     
 }
 
@@ -161,6 +161,7 @@ padding:0;
 }
 .right-menu{
     display: flex;
+    background-size: cover;
     align-items: center;
     justify-content: center;
     text-align: justify;
@@ -213,7 +214,7 @@ padding:0;
     background-size: cover;
 
 }
-.gambar2{
+/* .gambar2{
     background-color: #000;
     background-size: cover;
     width: 100%;
@@ -222,7 +223,7 @@ padding:0;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 .gambar3{
     background-color: #000;
     background-size: 10%;
@@ -255,6 +256,7 @@ padding:0;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background-color: #191a2b;
 }
 .about{
     background-color: #fff;
@@ -291,7 +293,7 @@ padding:0;
 }
 
 
-.card{
+/* .card{
     width: 325px; 
     background-color: #f0f0f0;
     border-radius: 8px;
@@ -299,12 +301,13 @@ padding:0;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     margin: 50px;
     height: 100%;
-    display: flex;
+    display: flex; */
 
-}
+/* }
 .card img{
     width: 100%;
     height: auto;
+    
 }
 .card-content{
     padding: 16px;
@@ -330,10 +333,14 @@ padding:0;
     color:white;
     font-size: 70px;
     font-family: "Courier New ", monospace;
-}
+} */
 
-
-
+/* Card Home Listing */
+ .containerhome{
+    min-height: 100vh;
+    width: 100%;
+    background: url(home.jpg) no-repeat center;
+ }
 /* foooter */
 
 footer {

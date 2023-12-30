@@ -7,10 +7,11 @@
     <title> Ujung Landasan Restaurant</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link href="{{ asset('assets/index.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   </head>
 
 <body>
-@include('navbar')
+@include('navbar') 
   <!--section home-->
     <section id="home" class="hero-section">
       <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
@@ -51,16 +52,80 @@
     </section>
 
 
+
     <!--section listing home-->
-    <section  id="menu">
+    <section class="containerhome">
+      <!-- <div class="service-wrapper"> -->
+        <div class="service">
+          <h1 class="Ourservice">Our Services</h1>
+          <div class="cards">
+            <div class="card">
+              <h2 class="card-tetx">Convention Hall</h2>
+                <p class="text1">Restaurant ujunglandasan Menyediakan convention hall yang berkapasistas lebih dari 100 orang
+                  dapat digunakan untuk melakukan meeting maupun acara lainnya
+                </p>
+                <br>
+                <br>
+              <img class="image"src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
+            </div>
+            <div class="card">
+                <h2 class="card-tetx">Restaurant</h2>
+                <p class="text1">Restaurant ujunglandasan Menyediakan convention hall yang berkapasistas lebih dari 100 orang
+                  dapat digunakan untuk melakukan meeting maupun acara lainnya
+                </p>
+                <br>
+                <br>
+                <img class="image"src="{{ asset('assets/resto.jpg') }}" alt="convention hall">
+            </div>
+            <div class="card">
+                <h2 class="card-tetx">Restaurant</h2>
+                <p class="text1">Restaurant ujunglandasan Menyediakan convention hall yang berkapasistas lebih dari 100 orang
+                  dapat digunakan untuk melakukan meeting maupun acara lainnya
+                </p>
+                <br>
+                <br>
+                <img class="image"src="{{ asset('assets/resto.jpg') }}" alt="convention hall">
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
+
+    <!-- <section  id="menu">
       <div class="gambar3">
         <div class="card-text">
           <p>Our Services</p>
         </div>
         <section id="1"class="dashboad">
           <div class="dash">
-           
+            <div class="cards">
               <div class="card">
+                <i class="fa-brands fa-chromecast"></i>
+                <h2>Convention Hall</h2>
+                <p>Restaurant ujunglandasan Menyediakan convention hall yang berkapasistas lebih dari 100 orang
+                  dapat digunakan untuk melakukan meeting maupun acara lainnya
+                </p>
+            </div>
+              <div class="card">
+                <i class="fa-brands fa-layer-group"></i>
+                <h2>Restaurant</h2>
+                <p>Restaurant ujunglandasan Menyediakan convention hall yang berkapasistas lebih dari 100 orang
+                  dapat digunakan untuk melakukan meeting maupun acara lainnya
+                </p>
+            </div>
+              <div class="card">
+                <i class="fa-solid fa-user-group"></i>
+                <h2>Food and Drink</h2>
+                <p>Restaurant ujunglandasan Menyediakan convention hall yang berkapasistas lebih dari 100 orang
+                  dapat digunakan untuk melakukan meeting maupun acara lainnya
+                </p>
+            </div>
+          </div>
+              </div>
+            </div> -->
+
+           
+              <!-- <div class="card">
                 <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
                 <div class="card-content">
                   <h3>Card 1</h3>
@@ -91,7 +156,7 @@
                   <a href="" class="btn">Read More</a>
                 </div>
               </div>
-           
+            -->
         </section>
       </div>
     </section>
