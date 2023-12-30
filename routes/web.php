@@ -55,7 +55,7 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     Route::post('menu_update/{id}', [MenuController::class, 'update'])->name('admin.menu_update');
 
-   
+    
 });
 
 

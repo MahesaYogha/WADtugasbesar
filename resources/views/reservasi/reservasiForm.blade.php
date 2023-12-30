@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid" id="id-navbar">
-            <a class="navbar-brand" href="index.html">Ujung Landasan Restaurant</a>
+            <a class="navbar-brand" href="/home">Ujung Landasan Restaurant</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,7 +58,7 @@
                         <br>
                         <textarea type="string" class="form-control" name="catatan" id="catatan" rows="5"></textarea>
                     </div>
-                    <button type="submit" name="back" id="back" class="btn btn-light"><a href="reservasi.html">Kembali</a></button>
+                    <button type="submit" name="back" id="back" class="btn btn-light"><a href="/home">Kembali</a></button>
                     <button type="submit" name="create" id="create" class="btn btn-primary">Kirim</button>
                 </form>
             </div>
