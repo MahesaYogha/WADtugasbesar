@@ -22,7 +22,7 @@
                         <a class="nav-link" href="/reservasi/create">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
+                        <a class="nav-link" href="/admin/reservasi">Lihat Reservasi</a>
                     </li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
                             <td>{{ $row['jumlah_orang'] }} </td>
                             <td>{{ $row['tanggal_reservasi'] }}</td>
                             <td>{{ $row['catatan'] }}</td>
-                            <td><a class="btn btn-primary" href="/reservasi/{{ $row['id'] }}">Lihat Detail</a></td>
+                            <td><a class="btn btn-primary" href="/admin/reservasi/{{ $row['id'] }}">Lihat Detail</a></td>
                         </tr>
                         @endforeach
                         </tbody>

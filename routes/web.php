@@ -1,24 +1,14 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
-<<<<<<< HEAD
-=======
-use App\Http\Controllers\MasukanController;
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\CustomAuthController;
 use App\Http\Controllers\MenuController;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-use App\Http\Controllers\OurServiceController;
 
-=======
->>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
+use App\Http\Controllers\OurServiceController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,22 +26,15 @@ Route::get('register', [CustomAuthController::class, 'registration'])->name('reg
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/reservasi/create', [ReservasiController::class, 'create']);
-    Route::post('/reservasi/create', [ReservasiController::class, 'store']);
-    Route::get('/reservasi', [ReservasiController::class, 'index']);
-    Route::get('/reservasi/{id}', [ReservasiController::class, 'show']);
-    Route::get('/reservasi/{id}/edit', [ReservasiController::class, 'edit']);
-    Route::put('/reservasi/{id}/edit', [ReservasiController::class, 'update']);
-    Route::delete('/reservasi/{id}', [ReservasiController::class, 'destroy']);
-});
-
 
 Route::get('/home', [HomeController::class, 'index']);
 
 Route::get('/review', [ReviewController::class, 'index']);
 Route::get('/review', [ReviewController::class, 'create']);
 Route::get('/review', [ReviewController::class, 'edit']);
+
+Route::get('/reservasi/create', [ReservasiController::class, 'create'])->name('reservasi/reservasiForm');
+Route::post('/reservasi/create', [ReservasiController::class, 'store'])->name('admin/reservasi');
 
 // Route::get('/menu', [MenuController::class, 'index']);
 // Route::get('/menu', [MenuController::class, 'create']);
@@ -71,8 +54,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
 
     Route::get('about_us', [AboutUsController::class, 'index'])->name('admin.about_us');
     Route::post('update_about_us/{id}', [AboutUsController::class, 'update'])->name('admin.update_about_us');
-<<<<<<< HEAD
-=======
 
 
     Route::get('masukan', [MasukanController::class, 'index'])->name('admin.masukan');
@@ -80,7 +61,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::post('masukan_update/{id}', [MasukanController::class, 'update'])->name('admin.masukan_update');
     Route::get('delete_masukan/{id}', [MasukanController::class, 'destroy'])->name('admin.delete_masukan');
     Route::post('store_masukan', [MasukanController::class, 'store'])->name('admin.store_masukan');
-<<<<<<< HEAD
 
 
     Route::get('our_service', [OurServiceController::class, 'index'])->name('admin.our_service');
@@ -91,9 +71,12 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::get('update_service/{id}', [OurServiceController::class, 'edit'])->name('admin.update_service');
 
     Route::post('service_update/{id}', [OurServiceController::class, 'update'])->name('admin.service_update');
-=======
->>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
+
+    Route::get('reservasi', [ReservasiController::class, 'index'])->name('admin/reservasi');
+    Route::get('reservasi/{id}', [ReservasiController::class, 'show'])->name('admin/reservasi/{id}');
+    Route::get('reservasi/{id}/edit', [ReservasiController::class, 'edit'])->name('admin/reservasi/{id}/edit');
+    Route::put('reservasi/{id}/edit', [ReservasiController::class, 'update'])->name('admin/reservasi/{id}/edit');
+    Route::delete('reservasi/{id}', [ReservasiController::class, 'destroy'])->name('admin/reservasi/{id}');
 });
 
 

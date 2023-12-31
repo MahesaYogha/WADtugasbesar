@@ -20,7 +20,7 @@
                             <a class="nav-link" href="/reservasi/create">Reservasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
+                            <a class="nav-link" href="/admin/reservasi">Lihat Reservasi</a>
                         </li>
                     </ul>
                 </div>
@@ -57,8 +57,8 @@
                             <br>
                             <textarea type="string" class="form-control" name="catatan" id="catatan" rows="5" value="{{ $row->catatan }}" disabled></textarea>
                         </div>
-                        <a name="update" id="update" href="/reservasi/{{ $row->id }}/edit" class="btn btn-warning">Edit</a>
-                        <form action="/reservasi/{{ $row->id }}" method="post">@method('delete') @csrf<button type="submit" class="btn btn-danger">Delete</button></form>
+                        <a name="update" id="update" href="/admin/reservasi/{{ $row->id }}/edit" class="btn btn-warning" href="admin/reservasi">Edit</a>
+                        <form action="/admin/reservasi/{{ $row->id }}" method="post">@method('delete') @csrf<button type="submit" class="btn btn-danger" href="admin/reservasi">Delete</button></form>
                     </form>
                 </div>
             <center>

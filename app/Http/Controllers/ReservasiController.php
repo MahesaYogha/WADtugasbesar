@@ -11,7 +11,7 @@ class ReservasiController extends Controller
     {
         $count_reservasi = Reservasi::count();
         $reservasi = Reservasi::all();
-        return view('reservasi/listReservasi', compact('count_reservasi', 'reservasi'));
+        return view('/reservasi/listReservasi', compact('count_reservasi', 'reservasi'));
     }
 
     /**
@@ -47,7 +47,7 @@ class ReservasiController extends Controller
     {
         //
         $row = Reservasi::where('id', $id)->first();
-        return view('reservasi/detailReservasi', compact('row'));
+        return view('/reservasi/detailReservasi', compact('row'));
     }
 
     /**
@@ -57,7 +57,7 @@ class ReservasiController extends Controller
     {
         //
         $row = Reservasi::where('id', $id)->first();
-        return view('reservasi/FormUpdateReservasi', compact('row'));
+        return view('/reservasi/FormUpdateReservasi', compact('row'));
     }
 
     /**

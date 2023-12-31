@@ -8,8 +8,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link href="{{ asset('assets/index.css') }}" rel="stylesheet">
-<<<<<<< HEAD
-=======
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -30,7 +28,6 @@
       color: #f8d057;
     }
   </style>
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 </head>
 
 <body>
@@ -412,7 +409,7 @@
           <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
           <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
           <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
-          <button class="reservasi-button">Reservasi Sekarang!</button>
+          <button class="reservasi-button"><a href="/reservasi/create">Reservasi Sekarang!</a></button>
         </h1>
       </div>
     </div>

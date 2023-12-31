@@ -20,7 +20,7 @@
                             <a class="nav-link" href="/reservasi/create">Reservasi</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
+                            <a class="nav-link" href="/admin/reservasi">Lihat Reservasi</a>
                         </li>
                     </ul>
                 </div>
@@ -31,7 +31,7 @@
                 <h1>Perbarui Detail Reservasi</h1>
                 <br>
                 <div class="col">
-                    <form action="/reservasi/{{ $row->id }}/edit" method="POST" enctype="multipart/form-data">
+                    <form action="/admin/reservasi/{{ $row->id }}/edit" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
                         <div class="mb-3">
@@ -59,7 +59,7 @@
                             <br>
                             <textarea type="string" class="form-control" name="catatan" id="catatan" rows="5">{{ $row->catatan }}</textarea>
                         </div>
-                        <button type="submit" name="update" id="update" class="btn btn-warning">Edit</button>
+                        <button type="submit" name="update" id="update" class="btn btn-warning"><a href="admin/reservasi">Edit</a></button>
                     </form>
                 </div>
             <center>

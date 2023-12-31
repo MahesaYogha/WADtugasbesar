@@ -20,7 +20,7 @@
                         <a class="nav-link" href="/reservasi/create">Reservasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/reservasi">Lihat Reservasi</a>
+                        <a class="nav-link" href="/admin/reservasi">Lihat Reservasi</a>
                     </li>
                 </ul>
             </div>
@@ -59,7 +59,7 @@
                         <textarea type="string" class="form-control" name="catatan" id="catatan" rows="5"></textarea>
                     </div>
                     <button type="submit" name="back" id="back" class="btn btn-light"><a href="/home">Kembali</a></button>
-                    <button type="submit" name="create" id="create" class="btn btn-primary">Kirim</button>
+                    <button type="submit" name="create" id="create" class="btn btn-primary" href="admin/reservasi">Kirim</button>
                 </form>
             </div>
         </div>
