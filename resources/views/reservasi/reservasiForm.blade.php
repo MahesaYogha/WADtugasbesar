@@ -19,9 +19,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/reservasi/create">Reservasi</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/admin/reservasi">Lihat Reservasi</a>
-                    </li>
                 </ul>
             </div>
         </div>

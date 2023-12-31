@@ -9,21 +9,16 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-            <div class="container-fluid" id="id-navbar">
-                <a class="navbar-brand" href="/home">Ujung Landasan Restaurant</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="/reservasi/create">Reservasi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/admin/reservasi">Lihat Reservasi</a>
-                        </li>
-                    </ul>
+            <div class="container-fluid">
+                <div>
+                <a href="/">
+                    <img class="logo" src="{{ asset('assets/logo-ujunglandasan.png') }}" class="logo-navbar"
+                    alt="logo-ujunglandasan" width="50" height="50">
+                </a>
                 </div>
+
+                <a class="navbar-brand me-auto" href="#">Ujung Landasan</a>
+                <a class="nav-link mx-lg-2" href="/login">Kembali</a>
             </div>
         </nav>
         <div class="row->">
@@ -57,7 +52,7 @@
                             <br>
                             <textarea type="string" class="form-control" name="catatan" id="catatan" rows="5" value="{{ $row->catatan }}" disabled></textarea>
                         </div>
-                        <a name="update" id="update" href="/admin/reservasi/{{ $row->id }}/edit" class="btn btn-warning" href="admin/reservasi">Edit</a>
+                        <a name="update" id="update" href="/admin/reservasi/{{ $row->id }}/edit" class="btn btn-warning">Edit</a>
                         <form action="/admin/reservasi/{{ $row->id }}" method="post">@method('delete') @csrf<button type="submit" class="btn btn-danger" href="admin/reservasi">Delete</button></form>
                     </form>
                 </div>
