@@ -79,25 +79,16 @@
   <!--section listing home-->
   <section id="menu">
     <div class="gambar3">
-<<<<<<< HEAD
-      <div class="card-text">
-        <p>Our Services</p>
-=======
-<<<<<<< HEAD
+
       <div class="card-text mb-5">
         <center>
           <h1>Our Services</h1>
         </center>
-=======
-      <div class="card-text">
-        <p>Our Services</p>
->>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
       </div>
       <section id="1" class="dashboad">
         <div class="dash">
 
-<<<<<<< HEAD
+
           <div class="card">
             <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
             <div class="card-content">
@@ -108,8 +99,7 @@
             </div>
 
           </div>
-=======
-<<<<<<< HEAD
+
           @foreach ($service as $item)
           <div class="card">
             <img src="{{ asset('/') }}storage/{{ $item->gambar }}" alt="Conventional Hall"
@@ -128,18 +118,6 @@
 
 
 
-=======
-          <div class="card">
-            <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
-            <div class="card-content">
-              <h3>Card 1</h3>
-              <p>convention hall bla bla bla bla
-              </p>
-              <a href="" class="btn">Read More</a>
-            </div>
-
-          </div>
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 
           <div class="card">
             <img src="{{ asset('assets/download.jpeg') }}" alt="convention hall">
@@ -161,10 +139,6 @@
               <a href="" class="btn">Read More</a>
             </div>
           </div>
-<<<<<<< HEAD
-=======
->>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 
       </section>
     </div>
@@ -190,79 +164,10 @@
       </div>
     </div>
   </section>
-<<<<<<< HEAD
-  <!--section before reservasi-->
-  <section id="reservasi">
-    <div class="gambar4">
-    </div>
-  </section>
-  <!--section reservasi-->
-  <section class="reservasi-section">
-    <iframe style="width: 50%; height: 100%;"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2671539890116!2d116.13314967487135!3d-8.666123588198968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbc00738fe82d%3A0x37e6f67267832d3a!2sUjung%20Landasan%20Restaurant%20%2F%20U-Land%20Cafe!5e0!3m2!1sid!2sid!4v1701793150666!5m2!1sid!2sid"
-      frameborder="0"></iframe>
-    <div class="reservasi">
-      <div class="right-menu">
-        <h1 style="line-height: 1.8;color:white;">Kontak <br>
-          <span class="smaller-text">Dasan Tapen, Kec. Gerung</span>
-          <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
-          <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
-          <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
-          <button class="reservasi-button">Reservasi Sekarang!</button>
-        </h1>
-      </div>
-    </div>
-  </section>
-  <!--section sebelum footer-->
-  <section id="about">
-    <div class="gambar1">
-    </div>
-  </section>
 
-=======
-<<<<<<< HEAD
   <!--section before reservasi-->
   <section id="reservasi" style="height: 55vh">
 
-=======
-   <!--section before menu-->
-   
-  </section>
-  <!--section before menu-->
-  <section id="-reservasi">
-    <div class="gambar1">
-    </div>
-  </section>
-  <!--section reservasi-->
-  <section class="reservasi-section">
-    <iframe style="width: 50%; height: 100%;"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.2671539890116!2d116.13314967487135!3d-8.666123588198968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dcdbc00738fe82d%3A0x37e6f67267832d3a!2sUjung%20Landasan%20Restaurant%20%2F%20U-Land%20Cafe!5e0!3m2!1sid!2sid!4v1701793150666!5m2!1sid!2sid"
-      frameborder="0"></iframe>
-    <div class="reservasi">
-      <div class="right-menu">
-        <h1 style="line-height: 1.8;color:white;">Kontak <br>
-          <span class="smaller-text">Dasan Tapen, Kec. Gerung</span>
-          <span class="smaller-text">Kabupaten Lombok Barat, Nusa Tenggara Barat</span>
-          <span style="margin-bottom:10px;" class="smaller-text"> 83363</span>
-          <span style="margin-bottom:10px;" class="smaller-text">0812313941412</span>
-          <button class="reservasi-button">Reservasi Sekarang!</button>
-        </h1>
-      </div>
-    </div>
-  </section>
-
-  <!--section sebelum footer-->
-  <section id="about">
-    {{-- <h1>asdas</h1> --}}
-  </section>
-  <section id="masukan">
-    <div class="gambar1">
-    </div>
-  </section>
-  <!--section before reservasi-->
-  <section id="reservasi" style="height: 55vh">
-
->>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
     {{-- <h1>asda</h1> --}}
 
     <div class="row">
@@ -395,7 +300,6 @@
 
 
 
-<<<<<<< HEAD
   </section>
   <!--section reservasi-->
   <section class="reservasi-section">
@@ -418,10 +322,7 @@
   <section id="about">
     {{-- <h1>asdas</h1> --}}
   </section>
-=======
->>>>>>> 0e3ab3444c6f62e5555d7c52dea31dc4936ace32
 
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
   <!-- <section id= "14"class="menu">
       <div class="container d-flex align-items-center justify-content-center fs-1 text-white flex-column">
         <h1>UJUNG</h1>
@@ -432,8 +333,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
-<<<<<<< HEAD
-=======
 
 
   <script>
@@ -457,7 +356,6 @@
       });
   });
   </script>
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
 
 
 
@@ -474,11 +372,8 @@
 
 
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0dbe8e5530c92cc161fec6581997c5cf6c62fd53
   <!-- <!doctype html>
 <html lang="en">
   <head>
